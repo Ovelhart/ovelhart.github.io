@@ -5,19 +5,23 @@
     font-style: normal;
     font-display: swap;
 }
-body, html {
+
+body,
+html {
     width: 100%;
     height: 100%;
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
+
 body {
     background-image: url(img/dirt-escuro.png);
     background-size: 10vh;
     background-repeat: repeat;
     image-rendering: pixelated;
 }
+
 .barra-cima {
     background-image: url(img/dirt-meio-escuro-png.png);
     height: 20vh;
@@ -33,6 +37,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .barra-cima input {
     height: 7vh;
     appearance: none;
@@ -43,21 +48,24 @@ body {
     border: 0.4vh solid rgba(185, 185, 185, 0.932);
     background-color: rgba(0, 0, 0, 0.527);
 }
+
 .barra-cima h3 {
     margin: 1vh 0;
     padding: 0;
 }
+
 .world {
     display: flex;
     flex-direction: row;
     width: 60%;
-    height: 13vh;
+    min-height: 13vh;
+    max-height: 15vh;
     word-wrap: break-word;
-    word-break: break-all;
     margin: 2vh 0;
     padding: 1vh;
     cursor: pointer;
 }
+
 .world .w-info {
     height: 100%;
     display: flex;
@@ -67,19 +75,27 @@ body {
     text-align: left;
     margin-left: 2vh;
 }
-.world .w-info h4, .world .w-info h3 {
+
+.world .w-info h4,
+.world .w-info h3 {
     margin: 0.1vh 0;
+    font-size: 2.75vh;
 }
+
 .world .w-info h4 {
     color: rgb(127, 127, 127);
+    font-size: 2.25vh;
 }
+
 .world img {
     height: 13vh;
     width: 13vh;
 }
+
 .world .w-info * {
     margin: 0;
 }
+
 .barra-baixo {
     background-image: url(img/dirt-meio-escuro-png.png);
     height: 20vh;
@@ -93,20 +109,23 @@ body {
     align-items: center;
     align-content: center;
 }
+
 body .content {
     color: white;
     display: flex;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: calc(80% - 20vh);
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    overflow: auto;
     align-items: center;
     text-align: center;
 }
+
 button {
     border-style: solid;
-    border-width: 1.5vh; 
+    border-width: 1.5vh;
     border-image-source: url('img/9-patch.png');
     border-image-slice: 40;
     background-color: white;
@@ -119,11 +138,12 @@ button {
     padding: 0.5vh 0.5vh;
     cursor: pointer;
     text-decoration: none;
+    min-width: 40vw;
     max-width: 90vw;
     text-align: center;
     text-wrap: auto;
     display: flex;
-    word-break: break-all;
+    word-wrap: break-word;
     text-shadow: 2px 2px 0px black;
     font-size: 3vh;
     justify-content: center;
@@ -131,11 +151,33 @@ button {
     align-content: center;
     text-align: center;
 }
+
 * {
     font-family: 'minecraft', sans-serif;
     text-shadow: 2px 2px 0px black;
     color: white;
 }
+
 .cancel {
     width: 20%;
+}
+
+::-webkit-scrollbar-thumb {
+    border-style: solid;
+    border-width: 1.5vh;
+    border-image-source: url('img/scrol.png');
+    border-image-slice: 15;
+    background-color: #c0c0c0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 2.5vh;
 }
