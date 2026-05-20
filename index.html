@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>minecraft java</title>
+</head>
+
+<body>
+    <img class="logo" src="img/logo.png" alt="logo">
+    <button onclick="window.location.href='world-selection.html';" class="menu-button">Singleplayer</button>
+    <button onclick="window.location.href='multiplayer.html';" class="menu-button">Multiplayer</button>
+    <button onclick="window.location.href='languages.html';" class="menu-button">programming languages</button>
+    <button onclick="window.open('https://github.com/Ovelhart', '_blank');" class="menu-button">Github</button>
+    <p class="version">Html edition 1.1</p>
+</body>
+<script>
+    let posX = 0;
+
+    function panoramaLoop() {
+        posX -= 0.1;
+
+        document.body.style.backgroundPositionX = posX + "px";
+
+        requestAnimationFrame(panoramaLoop);
+    }
+
+    panoramaLoop();
+</script>
+
+</html>
