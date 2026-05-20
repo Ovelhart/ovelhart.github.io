@@ -5,19 +5,23 @@
     font-style: normal;
     font-display: swap;
 }
-body, html {
+
+body,
+html {
     width: 100%;
     height: 100%;
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
+
 body {
     background-image: url(img/dirt-escuro.png);
     background-size: 10vh;
     background-repeat: repeat;
     image-rendering: pixelated;
 }
+
 .barra-cima {
     background-image: url(img/dirt-meio-escuro-png.png);
     height: 10vh;
@@ -29,10 +33,11 @@ body {
     display: flex;
     text-align: center;
     font-size: 2.25vh;
-    align-items:end;
+    align-items: end;
     align-content: center;
     justify-content: center;
 }
+
 .barra-cima input {
     height: 7vh;
     appearance: none;
@@ -43,6 +48,7 @@ body {
     border: 0.4vh solid rgba(185, 185, 185, 0.932);
     background-color: rgba(0, 0, 0, 0.527);
 }
+
 .barra-cima h3 {
     margin: 3vh 0;
     padding: 0;
@@ -63,6 +69,7 @@ body {
     align-items: center;
     align-content: center;
 }
+
 body .content {
     color: white;
     display: flex;
@@ -75,9 +82,10 @@ body .content {
     text-align: center;
     overflow: auto;
 }
+
 button {
     border-style: solid;
-    border-width: 1.5vh; 
+    border-width: 1.5vh;
     border-image-source: url('img/9-patch.png');
     border-image-slice: 40;
     background-color: white;
@@ -90,11 +98,12 @@ button {
     padding: 0.5vh 0.5vh;
     cursor: pointer;
     text-decoration: none;
+    min-width: 40vw;
     max-width: 90vw;
     text-align: center;
     text-wrap: auto;
     display: flex;
-    word-break: break-all;
+    word-wrap: break-word;
     text-shadow: 2px 2px 0px black;
     font-size: 3vh;
     justify-content: center;
@@ -102,37 +111,55 @@ button {
     align-content: center;
     text-align: center;
 }
+
 * {
     font-family: 'minecraft', sans-serif;
     text-shadow: 2px 2px 0px black;
     color: white;
 }
+
 .cancel {
     width: 20%;
 }
-#markdown{
+
+#markdown {
     overflow: auto;
     width: 90%;
-    line-height:1.7;
+    line-height: 1.7;
     margin-bottom: 30vh;
+    font-size: 2.25vh;
 }
+
 #markdown h1,
 #markdown h2,
-#markdown h3{
-    border-bottom:1px solid #30363d;
-    padding-bottom:10px;
+#markdown h3 {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 10px;
+    font-size: 2.25vh;
 }
-#markdown code{
-    background:#21262d;
-    padding:2px 6px;
-    border-radius:6px;
+
+#markdown h4,
+#markdown p,
+#markdown h5,
+#markdown b,
+#markdown i,
+#markdown br {
+    font-size: 2.25vh;
 }
-#markdown pre{
-    background:#0d1117;
-    padding:15px;
-    border-radius:10px;
-    overflow:auto;
+
+#markdown code {
+    background: #21262d;
+    padding: 2px 6px;
+    border-radius: 6px;
 }
+
+#markdown pre {
+    background: #0d1117;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
 ::-webkit-scrollbar-thumb {
     border-style: solid;
     border-width: 1.5vh;
@@ -148,6 +175,7 @@ button {
 ::-webkit-scrollbar-track {
     background-color: transparent;
 }
+
 ::-webkit-scrollbar {
     width: 2.5vh;
 }
