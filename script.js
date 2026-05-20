@@ -60,7 +60,7 @@ async function loadRepos() {
   const content = document.querySelector(".content");
   if (!content) return;
 
-  content.innerHTML = `<p style="color:#aaa;padding:1rem">Carregando repositórios...</p>`;
+  content.innerHTML = `<p style="color:#aaa;padding:1rem">Loading repositories...</p>`;
 
   try {
     const apiRes = await fetch(
